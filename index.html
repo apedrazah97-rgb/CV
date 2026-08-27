@@ -114,6 +114,22 @@
       color: var(--ink-muted);
     }
 
+    #tb-nav {
+      display: flex;
+      align-items: center;
+      gap: var(--s5);
+    }
+
+    .tb-link {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .tb-link:hover { color: var(--accent); }
+
     #tb-controls {
       display: flex;
       align-items: center;
@@ -721,6 +737,7 @@
       #content { padding-left: 0; }
       #topbar { padding: 0 var(--s4); }
       #tb-name { display: none; }
+      #tb-nav { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -737,6 +754,17 @@
 <!-- TOP BAR -->
 <header id="topbar">
   <span id="tb-name">Andrea Pedraza Herrera</span>
+  <nav id="tb-nav" aria-label="Page sections">
+    <a href="#profile"    class="tb-link en-only">Profile</a>
+    <a href="#profile"    class="tb-link es-only">Perfil</a>
+    <a href="#experience" class="tb-link en-only">Experience</a>
+    <a href="#experience" class="tb-link es-only">Experiencia</a>
+    <a href="#projects"   class="tb-link en-only">Projects</a>
+    <a href="#projects"   class="tb-link es-only">Proyectos</a>
+    <a href="#courses"    class="tb-link en-only">Courses</a>
+    <a href="#courses"    class="tb-link es-only">Cursos</a>
+    <a href="#portfolio"  class="tb-link">Portfolio</a>
+  </nav>
   <div id="tb-controls">
     <div id="lang-pill" role="group" aria-label="Language">
       <button id="btn-en" class="on" onclick="setLang('en')" aria-pressed="true">EN</button>
@@ -853,7 +881,7 @@
   <main id="content">
 
     <!-- Profile -->
-    <section class="cv-section">
+    <section class="cv-section" id="profile">
       <div class="sec-head">
         <h2 class="sec-title en-only">Profile</h2>
         <h2 class="sec-title es-only">Perfil</h2>
@@ -868,7 +896,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="cv-section">
+    <section class="cv-section" id="experience">
       <div class="sec-head">
         <h2 class="sec-title en-only">Experience</h2>
         <h2 class="sec-title es-only">Experiencia</h2>
@@ -1002,7 +1030,7 @@
     </section>
 
     <!-- Academic Projects -->
-    <section class="cv-section">
+    <section class="cv-section" id="projects">
       <div class="sec-head">
         <h2 class="sec-title en-only">Academic Projects</h2>
         <h2 class="sec-title es-only">Proyectos Académicos</h2>
