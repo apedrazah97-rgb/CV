@@ -715,7 +715,7 @@
     @media (max-width: 780px) {
       #hero {
         grid-template-columns: 1fr;
-        padding: calc(46px + var(--s6)) var(--s4) var(--s5);
+        padding: calc(80px + var(--s6)) var(--s4) var(--s5);
       }
       .hero-right { display: none; }
 
@@ -735,9 +735,10 @@
       }
 
       #content { padding-left: 0; }
-      #topbar { padding: 0 var(--s4); }
+      #topbar { padding: 0 var(--s4); height: auto; min-height: 46px; flex-wrap: wrap; gap: var(--s2); padding-top: 8px; padding-bottom: 8px; }
       #tb-name { display: none; }
-      #tb-nav { display: none; }
+      #tb-nav { gap: var(--s3); flex-wrap: wrap; }
+      .tb-link { font-size: 10px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1107,8 +1108,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Bioequivalencia', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Bioequivalencia',null,null)">
+             onclick="openCert('Bioequivalencia', null, 'certs/bioequivalencia.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Bioequivalencia',null,'certs/bioequivalencia.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name">Bioequivalencia</p>
@@ -1125,8 +1126,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Farmacovigilancia y Tecnovigilancia (NOM 220)', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Farmacovigilancia y Tecnovigilancia (NOM 220)',null,null)">
+             onclick="openCert('Farmacovigilancia y Tecnovigilancia (NOM 220)', null, 'certs/farmacovigilancia-nom220.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Farmacovigilancia y Tecnovigilancia (NOM 220)',null,'certs/farmacovigilancia-nom220.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name en-only">Pharmacovigilance &amp; Technovigilance (NOM 220)</p>
@@ -1144,8 +1145,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Control Sanitario de la Publicidad', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Control Sanitario de la Publicidad',null,null)">
+             onclick="openCert('Control Sanitario de la Publicidad', null, 'certs/control-sanitario-publicidad.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Control Sanitario de la Publicidad',null,'certs/control-sanitario-publicidad.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name en-only">Sanitary Control of Advertising</p>
@@ -1163,8 +1164,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('ICH E6 R3 — Buenas Prácticas Clínicas', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('ICH E6 R3 — Buenas Prácticas Clínicas',null,null)">
+             onclick="openCert('ICH E6 R3 — Buenas Prácticas Clínicas', null, 'certs/ich-e6-r3.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('ICH E6 R3 — Buenas Prácticas Clínicas',null,'certs/ich-e6-r3.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name">ICH E6 R3 — Good Clinical Practice</p>
@@ -1181,8 +1182,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('NOM 004 SSA3 2012', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('NOM 004 SSA3 2012',null,null)">
+             onclick="openCert('NOM 004 SSA3 2012', null, 'certs/nom-004-ssa3.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('NOM 004 SSA3 2012',null,'certs/nom-004-ssa3.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name">NOM 004 SSA3 2012</p>
@@ -1199,8 +1200,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Regulación Sanitaria en Comercio Internacional', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Regulación Sanitaria en Comercio Internacional',null,null)">
+             onclick="openCert('Regulación Sanitaria en Comercio Internacional', null, 'certs/reg-sanitaria-internacional.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Regulación Sanitaria en Comercio Internacional',null,'certs/reg-sanitaria-internacional.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name en-only">Sanitary Regulation in International Trade</p>
@@ -1218,8 +1219,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Ética y Desarrollo de Productos Farmacéuticos', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Ética y Desarrollo de Productos Farmacéuticos',null,null)">
+             onclick="openCert('Ética y Desarrollo de Productos Farmacéuticos', null, 'certs/etica-farmaceutica.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Ética y Desarrollo de Productos Farmacéuticos',null,'certs/etica-farmaceutica.pdf')">
           <span class="crs-provider en-only">Ext. Training · Jun 2026</span>
           <span class="crs-provider es-only">Cap. Externa · Jun 2026</span>
           <p class="crs-name en-only">Ethics &amp; Pharmaceutical Product Development</p>
@@ -1237,8 +1238,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Atención Clínica en Contextos Culturales', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Atención Clínica en Contextos Culturales',null,null)">
+             onclick="openCert('Atención Clínica en Contextos Culturales', null, 'certs/atencion-clinica-cultural.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Atención Clínica en Contextos Culturales',null,'certs/atencion-clinica-cultural.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name en-only">Clinical Care in Different Cultural Contexts</p>
@@ -1256,8 +1257,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Rol de la Biodiversidad en One Health', null, null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Rol de la Biodiversidad en One Health',null,null)">
+             onclick="openCert('Rol de la Biodiversidad en One Health', null, 'certs/biodiversidad-one-health.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Rol de la Biodiversidad en One Health',null,'certs/biodiversidad-one-health.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
           <span class="crs-provider es-only">Cap. Externa · May 2026</span>
           <p class="crs-name en-only">Biodiversity's Role in One Health</p>
@@ -1275,8 +1276,8 @@
         </div>
 
         <div class="course-card" tabindex="0" role="button"
-             onclick="openCert('Introducción a la Ética y la Bioética', 'UNAM — Programa Universitario de Bioética', null)"
-             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Introducción a la Ética y la Bioética','UNAM — Programa Universitario de Bioética',null)">
+             onclick="openCert('Introducción a la Ética y la Bioética', 'UNAM — Programa Universitario de Bioética', 'certs/etica-bioetica-unam.pdf')"
+             onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Introducción a la Ética y la Bioética','UNAM — Programa Universitario de Bioética','certs/etica-bioetica-unam.pdf')">
           <span class="crs-provider">UNAM · Jun 2026</span>
           <p class="crs-name en-only">Introduction to Ethics &amp; Bioethics</p>
           <p class="crs-name es-only">Introducción a la Ética y la Bioética</p>
@@ -1375,7 +1376,11 @@
     const body = document.getElementById('modal-body');
 
     if (src) {
-      body.innerHTML = `<img class="cert-img" src="${src}" alt="Certificate – ${name}">`;
+      if (src.endsWith('.pdf')) {
+        body.innerHTML = `<iframe src="${src}" style="width:100%;height:65vh;border:none;border-radius:4px;" title="Certificate – ${name}"></iframe>`;
+      } else {
+        body.innerHTML = `<img class="cert-img" src="${src}" alt="Certificate – ${name}">`;
+      }
     } else {
       const msg = lang === 'es'
         ? 'El certificado será añadido aquí en cuanto esté disponible.'
