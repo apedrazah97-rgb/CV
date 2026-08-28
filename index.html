@@ -292,6 +292,41 @@
 
     .sb-section { margin-bottom: var(--s6); }
 
+    .cv-dl-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--s3) var(--s3) var(--s3) var(--s4);
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--accent);
+      border-radius: 0 var(--rm) var(--rm) 0;
+      margin-bottom: var(--s2);
+    }
+
+    .cv-dl-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+
+    .cv-dl-actions { display: flex; gap: var(--s2); }
+
+    .cv-dl-btn {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-muted);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 3px 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .cv-dl-btn:hover { color: var(--accent); border-color: var(--accent); }
+
     .sb-label {
       font-family: var(--mono);
       font-size: 9.5px;
@@ -827,6 +862,35 @@
 
   <!-- ─── SIDEBAR ─── -->
   <aside id="sidebar">
+
+    <div class="sb-section">
+      <p class="sb-label en-only">Download CV</p>
+      <p class="sb-label es-only">Descargar CV</p>
+
+      <div class="cv-dl-card">
+        <span class="cv-dl-label">CV — English</span>
+        <div class="cv-dl-actions">
+          <button class="cv-dl-btn" onclick="openCert('Curriculum Vitae — English', 'Andrea Pedraza Herrera', 'cv-en.pdf')">
+            <span class="en-only">Preview</span><span class="es-only">Vista previa</span>
+          </button>
+          <a class="cv-dl-btn" href="cv-en.pdf" download="CV_Andrea_Pedraza_EN.pdf">
+            <span class="en-only">Download</span><span class="es-only">Descargar</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cv-dl-card">
+        <span class="cv-dl-label">CV — Español</span>
+        <div class="cv-dl-actions">
+          <button class="cv-dl-btn" onclick="openCert('Curriculum Vitae — Español', 'Andrea Pedraza Herrera', 'cv-es.pdf')">
+            <span class="en-only">Preview</span><span class="es-only">Vista previa</span>
+          </button>
+          <a class="cv-dl-btn" href="cv-es.pdf" download="CV_Andrea_Pedraza_ES.pdf">
+            <span class="en-only">Download</span><span class="es-only">Descargar</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
     <div class="sb-section">
       <p class="sb-label en-only">Technical Skills</p>
