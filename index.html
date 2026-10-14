@@ -800,6 +800,8 @@
     <a href="#courses"    class="tb-link en-only">Courses</a>
     <a href="#courses"    class="tb-link es-only">Cursos</a>
     <a href="#portfolio"  class="tb-link">Portfolio</a>
+    <a href="#contact"    class="tb-link en-only">Hire Me</a>
+    <a href="#contact"    class="tb-link es-only">Contrátame</a>
   </nav>
   <div id="tb-controls">
     <div id="lang-pill" role="group" aria-label="Language">
@@ -1012,8 +1014,8 @@
               <span class="exp-role es-only">Desarrolladora Full-Stack / Análisis de Datos — Servicio Social</span>
               <span class="exp-org"> · INJUVE Nuevo León</span>
             </div>
-            <span class="exp-date en-only">Jul 2026 – Present</span>
-            <span class="exp-date es-only">Jul 2026 – Presente</span>
+            <span class="exp-date en-only">Jul 2026 – Oct 2026</span>
+            <span class="exp-date es-only">Jul 2026 – Oct 2026</span>
           </div>
           <ul class="exp-list en-only">
             <li>Designed and developed a web platform (React + Vite) to manage language programs across multiple campuses, with six user roles (superadmin, director, coordinator, teacher, student, sales admin) and role-based permissions.</li>
@@ -1524,6 +1526,61 @@
       </div>
     </section>
 
+    <!-- Hire Me / Contact -->
+    <section class="cv-section" id="contact">
+      <h2 class="cv-section-title en-only">Let's Work Together</h2>
+      <h2 class="cv-section-title es-only">Trabajemos Juntos</h2>
+
+      <p class="en-only" style="margin-bottom:24px;color:var(--ink-muted);max-width:520px;line-height:1.6;">Interested in collaborating on a project? Tell me a bit about what you're building and I'll get back to you.</p>
+      <p class="es-only" style="margin-bottom:24px;color:var(--ink-muted);max-width:520px;line-height:1.6;">¿Te interesa colaborar en un proyecto? Cuéntame un poco más de lo que tienes en mente y con gusto te respondo.</p>
+
+      <div id="contact-success" style="display:none;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;max-width:520px;margin-bottom:16px;">
+        <p class="en-only" style="color:var(--accent);font-weight:600;margin-bottom:4px;">Message sent!</p>
+        <p class="es-only" style="color:var(--accent);font-weight:600;margin-bottom:4px;">¡Mensaje enviado!</p>
+        <p class="en-only" style="color:var(--ink-muted);font-size:13px;">Thanks for reaching out — I'll reply soon.</p>
+        <p class="es-only" style="color:var(--ink-muted);font-size:13px;">Gracias por escribir — te respondo pronto.</p>
+      </div>
+
+      <div id="contact-error" style="display:none;padding:12px 16px;background:var(--surface);border:1px solid #c0392b44;border-radius:8px;max-width:520px;margin-bottom:16px;">
+        <p class="en-only" style="color:#c0392b;font-size:13px;">Something went wrong. Try again or email me directly.</p>
+        <p class="es-only" style="color:#c0392b;font-size:13px;">Algo salió mal. Intenta de nuevo o escríbeme directamente.</p>
+      </div>
+
+      <form id="contact-form" style="display:flex;flex-direction:column;gap:16px;max-width:520px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label for="c-name" class="en-only" style="font-size:12px;color:var(--ink-muted);font-family:var(--mono);">Name</label>
+          <label for="c-name" class="es-only" style="font-size:12px;color:var(--ink-muted);font-family:var(--mono);">Nombre</label>
+          <input type="text" id="c-name" name="name" required autocomplete="name"
+            style="padding:10px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--ink);font-family:var(--sans);font-size:14px;outline:none;transition:border-color .15s;"
+            onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'" />
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label for="c-email" style="font-size:12px;color:var(--ink-muted);font-family:var(--mono);">Email</label>
+          <input type="email" id="c-email" name="email" required autocomplete="email"
+            style="padding:10px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--ink);font-family:var(--sans);font-size:14px;outline:none;transition:border-color .15s;"
+            onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'" />
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label for="c-msg" class="en-only" style="font-size:12px;color:var(--ink-muted);font-family:var(--mono);">Tell me about your project</label>
+          <label for="c-msg" class="es-only" style="font-size:12px;color:var(--ink-muted);font-family:var(--mono);">Cuéntame de tu proyecto</label>
+          <textarea id="c-msg" name="message" required rows="5"
+            style="padding:10px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--ink);font-family:var(--sans);font-size:14px;outline:none;resize:vertical;transition:border-color .15s;"
+            onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+        </div>
+
+        <div>
+          <button type="submit" id="contact-submit"
+            style="padding:10px 22px;background:var(--accent);color:#fff;border:none;border-radius:6px;font-family:var(--sans);font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.3px;transition:opacity .15s;"
+            onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+            <span class="en-only">Send message →</span>
+            <span class="es-only">Enviar mensaje →</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
   </main>
 </div>
 
@@ -1607,6 +1664,35 @@
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeCert();
+  });
+</script>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('contact-submit');
+    btn.disabled = true;
+    btn.style.opacity = '.5';
+    document.getElementById('contact-error').style.display = 'none';
+    try {
+      const res = await fetch('https://formspree.io/f/xqpeynev', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        this.style.display = 'none';
+        document.getElementById('contact-success').style.display = 'block';
+      } else {
+        document.getElementById('contact-error').style.display = 'block';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    } catch(_) {
+      document.getElementById('contact-error').style.display = 'block';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
   });
 </script>
 
