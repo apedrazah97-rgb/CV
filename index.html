@@ -754,6 +754,56 @@
     }
 
     /* ═══════════════════════════════════════
+       PORTFOLIO PREVIEWS
+    ═══════════════════════════════════════ */
+    .proj-preview {
+      position: relative;
+      border-radius: var(--r);
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      margin-top: 14px;
+      background: var(--bg);
+    }
+    .proj-preview img {
+      width: 100%;
+      display: block;
+      max-height: 190px;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.35s ease;
+    }
+    .proj-preview:hover img { transform: scale(1.03); }
+    .proj-preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(12,15,26,0.48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #fff;
+      font-size: 12.5px;
+      font-family: var(--sans);
+      letter-spacing: .3px;
+      transition: opacity 0.25s;
+      pointer-events: none;
+    }
+    .proj-preview:hover .proj-preview-overlay { opacity: 0; }
+    .proj-preview-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(12,15,26,0.65);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════
        PORTFOLIO MODAL
     ═══════════════════════════════════════ */
     #pm-modal {
@@ -1570,21 +1620,29 @@
           <p class="proj-name">Die Küche <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Freelance</span></p>
           <p class="proj-desc">Educational German culinary vocabulary game developed as a teaching resource for Focused Languages. Features 28 questions with visual and audio feedback, an interactive hotspot system for image-based vocabulary, and a debug mode for streamlined content editing without touching source code. Oct 2026.</p>
           <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">HTML · CSS · JavaScript</p>
-          <button onclick="openPortfolioModal('Die Küche',['portfolio/die-kuche-gameplay.gif'],1)" class="c-chip" style="margin-top:10px;display:inline-flex;cursor:pointer;background:none;border:1px solid var(--border);">▶ Watch demo</button>
+          <div class="proj-preview" onclick="openPortfolioModal('Die Küche',['portfolio/die-kuche-gameplay.gif'],1)">
+            <img src="portfolio/die-kuche-gameplay.gif" alt="Die Küche gameplay" loading="lazy" />
+            <div class="proj-preview-overlay">▶ Watch demo</div>
+          </div>
         </div>
         <div class="proj-card">
           <p class="proj-name">Supermarkt Spiel <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Freelance</span></p>
           <p class="proj-desc">Interactive German supermarket vocabulary game built as a Single Page Application with zero external dependencies. Features a custom-perspective HTML5 Canvas 3D engine with a dynamic vanishing point, interactive hotspots with proximity-based collision detection, 80+ products across 10 thematic sections with real aisle images, a recipe system and shopping cart with real-time totals, fullscreen mode, an animated character with smooth movement physics, and an integrated drag-&-drop debug positioning tool. Oct 2026.</p>
           <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">HTML5 · Canvas 2D API · JavaScript · CSS3</p>
-          <button onclick="openPortfolioModal('Supermarkt Spiel',['portfolio/super-market-spiel.gif'],1)" class="c-chip" style="margin-top:10px;display:inline-flex;cursor:pointer;background:none;border:1px solid var(--border);">▶ Watch demo</button>
+          <div class="proj-preview" onclick="openPortfolioModal('Supermarkt Spiel',['portfolio/super-market-spiel.gif'],1)">
+            <img src="portfolio/super-market-spiel.gif" alt="Supermarkt Spiel gameplay" loading="lazy" />
+            <div class="proj-preview-overlay">▶ Watch demo</div>
+          </div>
         </div>
         <div class="proj-card">
           <p class="proj-name">INJUVE Link <span class="edu-badge" style="margin-left:8px;vertical-align:middle;">Live</span></p>
           <p class="proj-desc">Web portal for INJUVE scholarship holders centralizing grant information and support. Built a full ticketing system with real-time chat, file attachments, and an agent panel. Recent contributions include: automatic inactivity messages after 5 min of agent silence, a redesigned default-responses panel with live search and name-based structure, business-hours enforcement on both front-end (disabled button with tooltip) and back-end (403 outside 9–17 h Monterrey), a 5-role user manual covering Students, Teachers, and all Coordinator levels, and custom domain setup — migrating from a Vercel subdomain to injuvelink.com with DNS configuration, nameserver migration to Vercel, and a Next.js middleware 301 redirect from the legacy URL.</p>
           <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">Next.js 14 · React · Supabase · PostgreSQL · Vercel</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
-            <a href="https://injuvelink.com" target="_blank" rel="noopener" class="c-chip" style="display:inline-flex;">↗ injuvelink.com</a>
-            <button onclick="openPortfolioModal('INJUVE Link',['portfolio/injuve-link-main.jpg','portfolio/injuve-link-login.jpg','portfolio/injuve-link-panel.jpg','portfolio/injuve-link-alumno.jpg','portfolio/injuve-link-actividades.jpg','portfolio/injuve-link-minijuegos.jpg','portfolio/injuve-link-bota-sube.jpg','portfolio/injuve-link-bota-sube-gameplay.jpg'],8)" class="c-chip" style="display:inline-flex;cursor:pointer;background:none;border:1px solid var(--border);">🖼 View screenshots</button>
+          <a href="https://injuvelink.com" target="_blank" rel="noopener" class="c-chip" style="margin-top:10px;display:inline-flex;">↗ injuvelink.com</a>
+          <div class="proj-preview" onclick="openPortfolioModal('INJUVE Link',['portfolio/injuve-link-main.jpg','portfolio/injuve-link-login.jpg','portfolio/injuve-link-panel.jpg','portfolio/injuve-link-alumno.jpg','portfolio/injuve-link-actividades.jpg','portfolio/injuve-link-minijuegos.jpg','portfolio/injuve-link-bota-sube.jpg','portfolio/injuve-link-bota-sube-gameplay.jpg'],8)">
+            <img src="portfolio/injuve-link-main.jpg" alt="INJUVE Link screenshot" loading="lazy" />
+            <div class="proj-preview-overlay">🖼 View screenshots</div>
+            <span class="proj-preview-badge">1 / 8</span>
           </div>
         </div>
         <div class="proj-card">
@@ -1600,21 +1658,29 @@
           <p class="proj-name">Die Küche <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Freelance</span></p>
           <p class="proj-desc">Juego educativo de vocabulario culinario en alemán desarrollado como recurso didáctico para Focused Languages. Incluye 28 preguntas con retroalimentación visual y auditiva, un sistema de hotspots interactivos para vocabulario basado en imágenes, y un modo debug para edición de contenido sin modificar el código fuente. Oct 2026.</p>
           <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">HTML · CSS · JavaScript</p>
-          <button onclick="openPortfolioModal('Die Küche',['portfolio/die-kuche-gameplay.gif'],1)" class="c-chip" style="margin-top:10px;display:inline-flex;cursor:pointer;background:none;border:1px solid var(--border);">▶ Ver demo</button>
+          <div class="proj-preview" onclick="openPortfolioModal('Die Küche',['portfolio/die-kuche-gameplay.gif'],1)">
+            <img src="portfolio/die-kuche-gameplay.gif" alt="Die Küche gameplay" loading="lazy" />
+            <div class="proj-preview-overlay">▶ Ver demo</div>
+          </div>
         </div>
         <div class="proj-card">
           <p class="proj-name">Supermarkt Spiel <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Freelance</span></p>
           <p class="proj-desc">Juego interactivo de vocabulario alemán de supermercado desarrollado como SPA sin dependencias externas. Motor gráfico 3D en HTML5 Canvas con proyección perspectiva custom y punto de fuga dinámico, sistema de hotspots con detección de colisión por proximidad, más de 80 productos en 10 secciones temáticas con imágenes reales de pasillos, sistema de recetas y carrito con cálculo de totales en tiempo real, modo pantalla completa, personaje animado con física de movimiento suave y herramienta de posicionamiento visual integrada (drag &amp; drop en modo debug). Oct 2026.</p>
           <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">HTML5 · Canvas 2D API · JavaScript · CSS3</p>
-          <button onclick="openPortfolioModal('Supermarkt Spiel',['portfolio/super-market-spiel.gif'],1)" class="c-chip" style="margin-top:10px;display:inline-flex;cursor:pointer;background:none;border:1px solid var(--border);">▶ Ver demo</button>
+          <div class="proj-preview" onclick="openPortfolioModal('Supermarkt Spiel',['portfolio/super-market-spiel.gif'],1)">
+            <img src="portfolio/super-market-spiel.gif" alt="Supermarkt Spiel gameplay" loading="lazy" />
+            <div class="proj-preview-overlay">▶ Ver demo</div>
+          </div>
         </div>
         <div class="proj-card">
           <p class="proj-name">INJUVE Link <span class="edu-badge" style="margin-left:8px;vertical-align:middle;">En Vivo</span></p>
           <p class="proj-desc">Portal web para becarios del INJUVE que centraliza el acceso a información de beca y soporte. Construí un sistema completo de tickets con chat en tiempo real, carga de adjuntos y panel de agentes. Contribuciones recientes: mensaje automático por inactividad del agente tras 5 min sin respuesta, rediseño del panel de respuestas predeterminadas con buscador en tiempo real y estructura nombre + texto, bloqueo del chat fuera de horario de atención en front-end (botón deshabilitado con tooltip) y back-end (403 fuera de 9–17 h zona Monterrey), manual de usuario de 5 roles: Alumnos, Maestros y niveles de Coordinación, y configuración de dominio personalizado — migración del subdominio de Vercel a injuvelink.com con configuración DNS, migración de nameservers a Vercel y redirección 301 permanente desde la URL anterior mediante middleware de Next.js.</p>
           <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">Next.js 14 · React · Supabase · PostgreSQL · Vercel</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
-            <a href="https://injuvelink.com" target="_blank" rel="noopener" class="c-chip" style="display:inline-flex;">↗ injuvelink.com</a>
-            <button onclick="openPortfolioModal('INJUVE Link',['portfolio/injuve-link-main.jpg','portfolio/injuve-link-login.jpg','portfolio/injuve-link-panel.jpg','portfolio/injuve-link-alumno.jpg','portfolio/injuve-link-actividades.jpg','portfolio/injuve-link-minijuegos.jpg','portfolio/injuve-link-bota-sube.jpg','portfolio/injuve-link-bota-sube-gameplay.jpg'],8)" class="c-chip" style="display:inline-flex;cursor:pointer;background:none;border:1px solid var(--border);">🖼 Ver capturas</button>
+          <a href="https://injuvelink.com" target="_blank" rel="noopener" class="c-chip" style="margin-top:10px;display:inline-flex;">↗ injuvelink.com</a>
+          <div class="proj-preview" onclick="openPortfolioModal('INJUVE Link',['portfolio/injuve-link-main.jpg','portfolio/injuve-link-login.jpg','portfolio/injuve-link-panel.jpg','portfolio/injuve-link-alumno.jpg','portfolio/injuve-link-actividades.jpg','portfolio/injuve-link-minijuegos.jpg','portfolio/injuve-link-bota-sube.jpg','portfolio/injuve-link-bota-sube-gameplay.jpg'],8)">
+            <img src="portfolio/injuve-link-main.jpg" alt="INJUVE Link screenshot" loading="lazy" />
+            <div class="proj-preview-overlay">🖼 Ver capturas</div>
+            <span class="proj-preview-badge">1 / 8</span>
           </div>
         </div>
         <div class="proj-card">
