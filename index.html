@@ -995,10 +995,38 @@
       }
 
       #content { padding-left: 0; }
-      #topbar { padding: 0 var(--s4); height: auto; min-height: 46px; flex-wrap: wrap; gap: var(--s2); padding-top: 8px; padding-bottom: 8px; }
+
+      /* Topbar — single row, nav scrolls horizontally */
+      #topbar { padding: 0 var(--s4); height: 46px; flex-wrap: nowrap; overflow: hidden; }
       #tb-name { display: none; }
-      #tb-nav { gap: var(--s3); flex-wrap: wrap; }
-      .tb-link { font-size: 10px; }
+      #tb-nav {
+        gap: var(--s3);
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-right: var(--s2);
+      }
+      #tb-nav::-webkit-scrollbar { display: none; }
+      .tb-link { font-size: 10.5px; white-space: nowrap; }
+
+      /* Hero contacts — truncate long URLs */
+      .c-chip { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+      /* Portfolio preview — show overlay always on touch, tap to open */
+      .proj-preview-overlay { opacity: 1; background: rgba(0,0,0,.45); }
+
+      /* Skill chips — tighter on mobile */
+      .skill-chips { gap: 4px; }
+      .skill-chip { font-size: 10.5px; padding: 2px 6px; }
+
+      /* Course filter — smaller pills on mobile */
+      .cf-btn { font-size: 10px; padding: 4px 10px; }
+
+      /* Form full width */
+      #contact-form input, #contact-form textarea, #contact-form select {
+        font-size: 16px; /* prevents iOS zoom on focus */
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
