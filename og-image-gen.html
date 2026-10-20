@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #09090F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  .card {
+    width: 1080px;
+    height: 530px;
+    background: #111220;
+    border-radius: 18px;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .top {}
+  .label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7C83E5;
+    margin-bottom: 14px;
+  }
+  .name {
+    font-size: 86px;
+    font-weight: 800;
+    color: #F0F0F8;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #2A2D4A;
+    margin-bottom: 20px;
+  }
+  .tagline {
+    font-size: 22px;
+    color: #6B7094;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  .chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+  }
+  .chip {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1.5px solid #2E3260;
+    background: #161830;
+    color: #A8AEDD;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projects {
+    display: flex;
+    gap: 40px;
+  }
+  .proj {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #6B7094;
+  }
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-green  { background: #3ECF8E; box-shadow: 0 0 8px #3ECF8E88; }
+  .dot-orange { background: #F5A623; box-shadow: 0 0 8px #F5A62388; }
+  .dot-purple { background: #9B8EF5; box-shadow: 0 0 8px #9B8EF588; }
+  .proj-name { color: #D0D2E8; font-weight: 500; }
+  .proj-badge { color: #6B7094; font-weight: 400; }
+  .url {
+    font-size: 17px;
+    font-weight: 600;
+    color: #7C83E5;
+    letter-spacing: 0.01em;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <p class="label">Fullstack Developer</p>
+      <h1 class="name">Andrea Pedraza</h1>
+      <div class="divider"></div>
+      <p class="tagline">Data &amp; Regulatory Background &nbsp;·&nbsp; Monterrey, MX</p>
+      <div class="chips">
+        <span class="chip">React</span>
+        <span class="chip">Next.js</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">Supabase</span>
+        <span class="chip">Canvas API</span>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="projects">
+        <div class="proj">
+          <span class="dot dot-green"></span>
+          <span class="proj-name">INJUVE Link</span>
+          <span class="proj-badge">· Live</span>
+        </div>
+        <div class="proj">
+          <span class="dot dot-orange"></span>
+          <span class="proj-name">Lengua Joven</span>
+          <span class="proj-badge">· In Progress</span>
+        </div>
+        <div class="proj">
+          <span class="dot dot-purple"></span>
+          <span class="proj-name">Canvas Games ×3</span>
+          <span class="proj-badge">· Freelance</span>
+        </div>
+      </div>
+      <span class="url">apedrazah.com</span>
+    </div>
+  </div>
+</body>
+</html>
