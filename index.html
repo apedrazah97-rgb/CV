@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrea Pedraza Herrera</title>
+  <title>Andrea Pedraza Herrera — Fullstack Developer</title>
+  <meta property="og:title" content="Andrea Pedraza Herrera — Fullstack Developer" />
+  <meta property="og:description" content="Fullstack developer with a background in data engineering, regulatory compliance, and clinical research. Portfolio: web apps, Canvas games, and more." />
+  <meta property="og:image" content="https://apedrazah.com/og-image.jpg" />
+  <meta property="og:url" content="https://apedrazah.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0QBGGV7MF"></script>
@@ -544,6 +550,59 @@
       line-height: 1.55;
     }
 
+    /* ── Skill groups (sidebar) ── */
+    .skill-group { margin-bottom: var(--s4); }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group-label {
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: var(--s2);
+    }
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .skill-chip {
+      font-size: 11px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    /* ── Course filter buttons ── */
+    .course-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s2);
+      margin-bottom: var(--s5);
+    }
+    .cf-btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .cf-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .cf-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .course-card[hidden] { display: none; }
+
     /* ═══════════════════════════════════════
        COURSES & CERTIFICATIONS
     ═══════════════════════════════════════ */
@@ -963,8 +1022,7 @@
     <a href="#portfolio"  class="tb-link es-only">Portafolio</a>
     <a href="#experience" class="tb-link en-only">Experience</a>
     <a href="#experience" class="tb-link es-only">Experiencia</a>
-    <a href="#projects"   class="tb-link en-only">Projects</a>
-    <a href="#projects"   class="tb-link es-only">Proyectos</a>
+
     <a href="#courses"    class="tb-link en-only">Courses</a>
     <a href="#courses"    class="tb-link es-only">Cursos</a>
     <a href="#contact"    class="tb-link en-only">Hire Me</a>
@@ -982,20 +1040,18 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow en-only">Data Analytics · Quality &amp; Compliance · Monterrey, MX</p>
-    <p class="hero-eyebrow es-only">Analítica de Datos · Calidad &amp; Cumplimiento · Monterrey, MX</p>
+    <p class="hero-eyebrow en-only">Fullstack Developer · Data &amp; Regulatory Background · Monterrey, MX</p>
+    <p class="hero-eyebrow es-only">Desarrolladora Fullstack · Experiencia en Datos &amp; Regulatorio · Monterrey, MX</p>
 
     <h1 class="hero-name">Andrea<br>Pedraza Herrera</h1>
 
     <p class="hero-tagline en-only">
-      Bridging rigorous quality management with data-driven decision making —
-      transitioning into data analytics with a background across healthcare,
-      clinical research, and technology.
+      Fullstack developer with a background in data engineering, regulatory compliance, and clinical research.
+      I build web applications and interactive tools — and I bring analytical rigor to every layer of the stack.
     </p>
     <p class="hero-tagline es-only">
-      Uniendo gestión de calidad rigurosa con toma de decisiones basada en datos —
-      en transición hacia analítica de datos con trayectoria en salud,
-      investigación clínica y tecnología.
+      Desarrolladora fullstack con experiencia en ingeniería de datos, cumplimiento regulatorio e investigación clínica.
+      Construyo aplicaciones web y herramientas interactivas, con rigor analítico en cada capa del stack.
     </p>
 
     <div class="hero-contacts">
@@ -1008,16 +1064,19 @@
       <a href="https://www.linkedin.com/in/andrea-pedraza-250057178/" class="c-chip" target="_blank" rel="noopener">
         <span class="c-dot"></span>linkedin.com/in/andrea-pedraza-250057178
       </a>
+      <a href="https://github.com/apedrazah97-rgb" class="c-chip" target="_blank" rel="noopener">
+        <span class="c-dot"></span>github.com/apedrazah97-rgb
+      </a>
     </div>
   </div>
 
   <div class="hero-right" aria-hidden="true">
     <div class="hero-deco">
-      <div class="deco-tag">SQL · Tableau · Excel</div>
+      <div class="deco-tag">React · Node.js · Next.js</div>
       <div class="deco-line" style="width:120px"></div>
-      <div class="deco-tag">COFEPRIS · FDA · ICH</div>
+      <div class="deco-tag">PostgreSQL · Supabase · Vercel</div>
       <div class="deco-line" style="width:80px"></div>
-      <div class="deco-tag">PMBOK · SAP · Big Data</div>
+      <div class="deco-tag">SQL · COFEPRIS · FDA · ICH</div>
       <div class="deco-line" style="width:100px"></div>
     </div>
   </div>
@@ -1062,22 +1121,41 @@
       <p class="sb-label en-only">Technical Skills</p>
       <p class="sb-label es-only">Habilidades Técnicas</p>
 
-      <div class="skill-list en-only">
-        <span class="skill-item">SQL — queries, ER diagrams, normalization</span>
-        <span class="skill-item">Google Data Analytics (Coursera) — cleaning, exploration &amp; interpretation</span>
-        <span class="skill-item">Big Data &amp; data mining fundamentals</span>
-        <span class="skill-item">Advanced Excel — analysis &amp; reporting</span>
-        <span class="skill-item">Project management (PMBOK framework)</span>
-        <span class="skill-item">Data governance &amp; regulatory compliance</span>
+      <div class="skill-group">
+        <p class="skill-group-label">Frontend</p>
+        <div class="skill-chips">
+          <span class="skill-chip">HTML5</span><span class="skill-chip">CSS3</span><span class="skill-chip">JavaScript</span><span class="skill-chip">React</span><span class="skill-chip">Vite</span><span class="skill-chip">Canvas API</span>
+        </div>
       </div>
-
-      <div class="skill-list es-only">
-        <span class="skill-item">SQL — consultas, diagramas ER, normalización</span>
-        <span class="skill-item">Google Data Analytics (Coursera) — limpieza, exploración e interpretación</span>
-        <span class="skill-item">Fundamentos de Big Data y minería de datos</span>
-        <span class="skill-item">Excel avanzado — análisis e informes</span>
-        <span class="skill-item">Gestión de proyectos (marco PMBOK)</span>
-        <span class="skill-item">Gobernanza de datos y cumplimiento regulatorio</span>
+      <div class="skill-group">
+        <p class="skill-group-label">Backend</p>
+        <div class="skill-chips">
+          <span class="skill-chip">Node.js</span><span class="skill-chip">Express.js</span><span class="skill-chip">Next.js 14</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label"><span class="en-only">Database</span><span class="es-only">Base de Datos</span></p>
+        <div class="skill-chips">
+          <span class="skill-chip">PostgreSQL</span><span class="skill-chip">Supabase</span><span class="skill-chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Deploy &amp; Tools</p>
+        <div class="skill-chips">
+          <span class="skill-chip">Vercel</span><span class="skill-chip">Render</span><span class="skill-chip">Git</span><span class="skill-chip">JWT</span><span class="skill-chip">Playwright</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label"><span class="en-only">Data & Analytics</span><span class="es-only">Datos &amp; Analítica</span></p>
+        <div class="skill-chips">
+          <span class="skill-chip">Tableau</span><span class="skill-chip">Excel</span><span class="skill-chip">SAP</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label"><span class="en-only">Regulatory</span><span class="es-only">Regulatorio</span></p>
+        <div class="skill-chips">
+          <span class="skill-chip">COFEPRIS</span><span class="skill-chip">FDA</span><span class="skill-chip">ICH</span><span class="skill-chip">PMBOK</span>
+        </div>
       </div>
     </div>
 
@@ -1089,8 +1167,8 @@
         <p class="edu-degree en-only">M.Sc. in Engineering — Data Science</p>
         <p class="edu-degree es-only">Maestría en Ingeniería — Ciencias de Datos</p>
         <p class="edu-school">UVM</p>
-        <span class="edu-badge en-only">Sep 2026</span>
-        <span class="edu-badge es-only">Sep 2026</span>
+        <span class="edu-badge en-only">Sep 2026 – Jun 2028 · In Progress</span>
+        <span class="edu-badge es-only">Sep 2026 – Jun 2028 · En curso</span>
       </div>
 
       <div class="edu-entry">
@@ -1135,10 +1213,10 @@
         <div class="sec-rule"></div>
       </div>
       <p class="profile-text en-only">
-        Data Science Engineer (UVM, 2026) transitioning into Data Analytics and full-stack web development. Combines a foundation in SQL, database modeling, and data visualization with hands-on experience managing regulated data, quality indicators, and audits in healthcare and clinical research settings. Seeking a data or development role to bring analytical rigor, attention to detail, and the ability to translate data into decisions.
+        Fullstack developer and Data Science Engineer (UVM, 2026) with a background in data engineering, regulatory compliance, and clinical research. Builds web applications and interactive tools — React, Node.js, PostgreSQL, Canvas API — and brings analytical rigor to every layer of the stack. Background includes managing regulated data, quality indicators, and audits across healthcare and clinical research environments.
       </p>
       <p class="profile-text es-only">
-        Ingeniera en Ciencias de Datos (UVM, 2026) en transición hacia el Análisis de Datos y el desarrollo web full-stack. Combina una base en SQL, modelado de bases de datos y visualización de datos con experiencia práctica en gestión de datos regulados, indicadores de calidad y auditorías en entornos de salud e investigación clínica. Busca un rol en datos o desarrollo para aplicar rigor analítico, atención al detalle y la capacidad de convertir datos en decisiones.
+        Desarrolladora fullstack e Ingeniera en Ciencias de Datos (UVM, 2026) con experiencia en ingeniería de datos, cumplimiento regulatorio e investigación clínica. Construye aplicaciones web y herramientas interactivas — React, Node.js, PostgreSQL, Canvas API — con rigor analítico en cada capa del stack. Su trayectoria incluye gestión de datos regulados, indicadores de calidad y auditorías en entornos de salud e investigación clínica.
       </p>
     </section>
 
@@ -1216,6 +1294,15 @@
             <span class="proj-preview-badge">1 / 4</span>
           </div>
         </div>
+        <div class="proj-card">
+          <p class="proj-name">Introduction to Food Science — Async Course <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Freelance</span> <span class="edu-badge" style="margin-left:4px;vertical-align:middle;">Live</span></p>
+          <p class="proj-desc">16 video lessons covering food science fundamentals — developed for Conociverso, an online learning consultancy. Oct 2026.</p>
+          <details class="proj-details">
+            <summary><span>Read more</span></summary>
+            <p class="proj-desc">Topics include food composition, physicochemical properties, food deterioration mechanisms (microbial, chemical, enzymatic), and quality control principles. Full instructional design and video production.</p>
+          </details>
+          <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">Food Science · Instructional Design · Async Video · Conociverso</p>
+        </div>
       </div>
 
       <div class="proj-list es-only">
@@ -1283,6 +1370,15 @@
             <div class="proj-preview-overlay">🖼 Ver capturas</div>
             <span class="proj-preview-badge">1 / 4</span>
           </div>
+        </div>
+        <div class="proj-card">
+          <p class="proj-name">Introducción a la Ciencia de Alimentos — Curso Asíncrono <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Freelance</span> <span class="edu-badge" style="margin-left:4px;vertical-align:middle;">En Vivo</span></p>
+          <p class="proj-desc">16 videolecciones sobre fundamentos de ciencia de alimentos — desarrollado para Conociverso, consultoría de aprendizaje en línea. Oct 2026.</p>
+          <details class="proj-details">
+            <summary><span>Leer más</span></summary>
+            <p class="proj-desc">Temas: composición de alimentos, propiedades fisicoquímicas, mecanismos de deterioro (microbiano, químico, enzimático) y principios de control de calidad. Diseño instruccional completo y producción de video.</p>
+          </details>
+          <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">Ciencia de Alimentos · Diseño Instruccional · Video Asíncrono · Conociverso</p>
         </div>
       </div>
     </section>
@@ -1445,31 +1541,6 @@
       </div>
     </section>
 
-    <!-- Academic Projects -->
-    <section class="cv-section" id="projects">
-      <div class="sec-head">
-        <h2 class="sec-title en-only">Academic Projects</h2>
-        <h2 class="sec-title es-only">Proyectos Académicos</h2>
-        <div class="sec-rule"></div>
-      </div>
-
-      <div class="proj-list en-only">
-        <div class="proj-card">
-          <p class="proj-name">Introduction to Food Science — Asynchronous Course <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">Live</span></p>
-          <p class="proj-desc">Recorded 16 video lessons for an asynchronous course covering the fundamentals of food science: food composition, physicochemical properties, food deterioration mechanisms (microbial, chemical, enzymatic), and quality control principles. Developed for Conociverso, an online learning consultancy.</p>
-          <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">Food Science · Instructional Design · Async Video · Conociverso</p>
-        </div>
-      </div>
-
-      <div class="proj-list es-only">
-        <div class="proj-card">
-          <p class="proj-name">Introducción a la Ciencia de Alimentos — Curso Asíncrono <span class="edu-badge" style="margin-left:8px;vertical-align:middle;background:var(--surface);color:var(--ink-muted);">En Vivo</span></p>
-          <p class="proj-desc">Grabé 16 videolecciones para un curso asíncrono sobre los fundamentos de la ciencia de alimentos: composición de alimentos, propiedades fisicoquímicas, mecanismos de deterioro (microbiano, químico, enzimático) y principios de control de calidad. Desarrollado para Conociverso, consultoría de aprendizaje en línea.</p>
-          <p class="proj-desc" style="margin-top:8px;font-size:11.5px;color:var(--ink-muted);font-family:var(--mono);">Ciencia de Alimentos · Diseño Instruccional · Video Asíncrono · Conociverso</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Courses & Certifications -->
     <section class="cv-section" id="courses">
       <div class="sec-head">
@@ -1478,31 +1549,38 @@
         <div class="sec-rule"></div>
       </div>
 
+      <div class="course-filters" role="group" aria-label="Filter courses">
+        <button class="cf-btn active" data-filter="all" onclick="filterCourses(this)"><span class="en-only">All</span><span class="es-only">Todos</span></button>
+        <button class="cf-btn" data-filter="dev" onclick="filterCourses(this)"><span class="en-only">Dev &amp; Data</span><span class="es-only">Desarrollo &amp; Datos</span></button>
+        <button class="cf-btn" data-filter="reg" onclick="filterCourses(this)"><span class="en-only">Regulatory &amp; Clinical</span><span class="es-only">Regulatorio &amp; Clínico</span></button>
+        <button class="cf-btn" data-filter="mgmt" onclick="filterCourses(this)"><span class="en-only">Management &amp; Quality</span><span class="es-only">Gestión &amp; Calidad</span></button>
+      </div>
+
       <div class="courses-grid">
 
         <!-- ── Sep 2023 ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('¿Qué es la Ciencia de Datos?','Coursera','certs/que-es-ciencia-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('¿Qué es la Ciencia de Datos?','Coursera','certs/que-es-ciencia-datos.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('¿Qué es la Ciencia de Datos?','Coursera','certs/que-es-ciencia-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('¿Qué es la Ciencia de Datos?','Coursera','certs/que-es-ciencia-datos.pdf')">
           <span class="crs-provider">Coursera · Sep 2023</span>
           <p class="crs-name en-only">What is Data Science?</p><p class="crs-name es-only">¿Qué es la Ciencia de Datos?</p>
           <p class="crs-desc en-only">Introduction to data science — roles, tools, and real-world applications.</p><p class="crs-desc es-only">Introducción a la ciencia de datos — roles, herramientas y aplicaciones reales.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Metodología de la Ciencia de Datos','Coursera','certs/metodologia-ciencia-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Metodología de la Ciencia de Datos','Coursera','certs/metodologia-ciencia-datos.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Metodología de la Ciencia de Datos','Coursera','certs/metodologia-ciencia-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Metodología de la Ciencia de Datos','Coursera','certs/metodologia-ciencia-datos.pdf')">
           <span class="crs-provider">Coursera · Sep 2023</span>
           <p class="crs-name en-only">Data Science Methodology</p><p class="crs-name es-only">Metodología de la Ciencia de Datos</p>
           <p class="crs-desc en-only">Structured problem-solving framework for data science projects from question to deployment.</p><p class="crs-desc es-only">Marco estructurado de resolución de problemas para proyectos de ciencia de datos.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Herramientas para las Ciencias de Datos','Coursera','certs/herramientas-ciencia-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Herramientas para las Ciencias de Datos','Coursera','certs/herramientas-ciencia-datos.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Herramientas para las Ciencias de Datos','Coursera','certs/herramientas-ciencia-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Herramientas para las Ciencias de Datos','Coursera','certs/herramientas-ciencia-datos.pdf')">
           <span class="crs-provider">Coursera · Sep 2023</span>
           <p class="crs-name en-only">Tools for Data Science</p><p class="crs-name es-only">Herramientas para las Ciencias de Datos</p>
           <p class="crs-desc en-only">Overview of key data science tools — Jupyter, RStudio, Git, and cloud environments.</p><p class="crs-desc es-only">Panorama de herramientas clave de ciencia de datos — Jupyter, RStudio, Git y entornos cloud.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Inducción al Análisis de Datos','Coursera','certs/induccion-analisis-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Inducción al Análisis de Datos','Coursera','certs/induccion-analisis-datos.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Inducción al Análisis de Datos','Coursera','certs/induccion-analisis-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Inducción al Análisis de Datos','Coursera','certs/induccion-analisis-datos.pdf')">
           <span class="crs-provider">Coursera · Sep 2023</span>
           <p class="crs-name en-only">Introduction to Data Analysis</p><p class="crs-name es-only">Inducción al Análisis de Datos</p>
           <p class="crs-desc en-only">Foundations of data analysis — data types, analytical thinking, and the data analysis process.</p><p class="crs-desc es-only">Fundamentos del análisis de datos — tipos de datos, pensamiento analítico y el proceso de análisis.</p>
@@ -1510,14 +1588,14 @@
         </div>
 
         <!-- ── Nov 2023 ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Overview of Data Visualization','Coursera','certs/overview-data-visualization.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Overview of Data Visualization','Coursera','certs/overview-data-visualization.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Overview of Data Visualization','Coursera','certs/overview-data-visualization.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Overview of Data Visualization','Coursera','certs/overview-data-visualization.pdf')">
           <span class="crs-provider">Coursera · Nov 2023</span>
           <p class="crs-name">Overview of Data Visualization</p>
           <p class="crs-desc en-only">Principles of visual communication — choosing the right chart and telling stories with data.</p><p class="crs-desc es-only">Principios de comunicación visual — elegir el gráfico correcto y contar historias con datos.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Storytelling with Data','Coursera','certs/storytelling-with-data.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Storytelling with Data','Coursera','certs/storytelling-with-data.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Storytelling with Data','Coursera','certs/storytelling-with-data.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Storytelling with Data','Coursera','certs/storytelling-with-data.pdf')">
           <span class="crs-provider">Coursera · Nov 2023</span>
           <p class="crs-name">Storytelling with Data</p>
           <p class="crs-desc en-only">Communicating data insights through effective visual narratives and presentation techniques.</p><p class="crs-desc es-only">Comunicación de insights de datos mediante narrativas visuales efectivas y técnicas de presentación.</p>
@@ -1525,14 +1603,14 @@
         </div>
 
         <!-- ── Dic 2023 ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Big Data: Visualización de Datos','Coursera','certs/big-data-visualizacion.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Big Data: Visualización de Datos','Coursera','certs/big-data-visualizacion.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Big Data: Visualización de Datos','Coursera','certs/big-data-visualizacion.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Big Data: Visualización de Datos','Coursera','certs/big-data-visualizacion.pdf')">
           <span class="crs-provider">Coursera · Dic 2023</span>
           <p class="crs-name en-only">Big Data: Data Visualization</p><p class="crs-name es-only">Big Data: Visualización de Datos</p>
           <p class="crs-desc en-only">Visualization techniques applied to large-scale datasets — tools, methods, and best practices.</p><p class="crs-desc es-only">Técnicas de visualización aplicadas a conjuntos de datos a gran escala — herramientas, métodos y buenas prácticas.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Storytelling and Influencing','Coursera','certs/storytelling-influencing.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Storytelling and Influencing','Coursera','certs/storytelling-influencing.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Storytelling and Influencing','Coursera','certs/storytelling-influencing.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Storytelling and Influencing','Coursera','certs/storytelling-influencing.pdf')">
           <span class="crs-provider">Coursera · Dic 2023</span>
           <p class="crs-name">Storytelling and Influencing</p>
           <p class="crs-desc en-only">Persuasion techniques and influence strategies for communicating data-driven decisions to stakeholders.</p><p class="crs-desc es-only">Técnicas de persuasión y estrategias de influencia para comunicar decisiones basadas en datos a stakeholders.</p>
@@ -1540,7 +1618,7 @@
         </div>
 
         <!-- ── Sin fecha (pendiente confirmar) ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Big Data Fundamentals',null,null)" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Big Data Fundamentals',null,null)">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Big Data Fundamentals',null,null)" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Big Data Fundamentals',null,null)">
           <span class="crs-provider en-only">Course</span><span class="crs-provider es-only">Curso</span>
           <p class="crs-name en-only">Big Data Fundamentals</p><p class="crs-name es-only">Fundamentos de Big Data</p>
           <p class="crs-desc en-only">Processing and analyzing large volumes of data — distributed systems and pipelines.</p><p class="crs-desc es-only">Procesamiento y análisis de grandes volúmenes de datos — sistemas distribuidos y pipelines.</p>
@@ -1548,21 +1626,21 @@
         </div>
 
         <!-- ── Nov 2024 ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Datos, Datos, Datos','Coursera','certs/datos-datos-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Datos, Datos, Datos','Coursera','certs/datos-datos-datos.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Datos, Datos, Datos','Coursera','certs/datos-datos-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Datos, Datos, Datos','Coursera','certs/datos-datos-datos.pdf')">
           <span class="crs-provider">Coursera · Nov 2024</span>
           <p class="crs-name en-only">Data, Data, Data</p><p class="crs-name es-only">Datos, Datos, Datos</p>
           <p class="crs-desc en-only">Working with data at scale — collection, structure, and analytical interpretation.</p><p class="crs-desc es-only">Trabajo con datos a escala — recopilación, estructura e interpretación analítica.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Preparar Datos para la Exploración','Coursera','certs/preparar-datos-exploracion.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Preparar Datos para la Exploración','Coursera','certs/preparar-datos-exploracion.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Preparar Datos para la Exploración','Coursera','certs/preparar-datos-exploracion.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Preparar Datos para la Exploración','Coursera','certs/preparar-datos-exploracion.pdf')">
           <span class="crs-provider">Coursera · Nov 2024</span>
           <p class="crs-name en-only">Prepare Data for Exploration</p><p class="crs-name es-only">Preparar Datos para la Exploración</p>
           <p class="crs-desc en-only">Data preparation techniques — cleaning, formatting, and validating datasets for analysis.</p><p class="crs-desc es-only">Técnicas de preparación de datos — limpieza, formato y validación de conjuntos de datos para análisis.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Toma de Decisiones Basadas en Datos','Coursera','certs/toma-decisiones-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Toma de Decisiones Basadas en Datos','Coursera','certs/toma-decisiones-datos.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Toma de Decisiones Basadas en Datos','Coursera','certs/toma-decisiones-datos.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Toma de Decisiones Basadas en Datos','Coursera','certs/toma-decisiones-datos.pdf')">
           <span class="crs-provider">Coursera · Nov 2024</span>
           <p class="crs-name en-only">Data-Driven Decision Making</p><p class="crs-name es-only">Toma de Decisiones Basadas en Datos</p>
           <p class="crs-desc en-only">Applying data analysis to business decisions — metrics, KPIs, and actionable insights.</p><p class="crs-desc es-only">Aplicación del análisis de datos a decisiones de negocio — métricas, KPIs e insights accionables.</p>
@@ -1570,14 +1648,14 @@
         </div>
 
         <!-- ── 2025 (fecha pendiente confirmar) ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Google Data Analytics','Coursera','certs/google-data-analytics-cert.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Google Data Analytics','Coursera','certs/google-data-analytics-cert.pdf')">
+        <div class="course-card" data-cat="dev" tabindex="0" role="button" onclick="openCert('Google Data Analytics','Coursera','certs/google-data-analytics-cert.pdf')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Google Data Analytics','Coursera','certs/google-data-analytics-cert.pdf')">
           <span class="crs-provider">Coursera</span>
           <p class="crs-name">Google Data Analytics</p>
           <p class="crs-desc en-only">Data cleaning, exploration, interpretation &amp; Tableau visualization using the McCandless Method.</p><p class="crs-desc es-only">Limpieza, exploración, interpretación de datos y visualización con Tableau usando el Método McCandless.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Bioequivalencia', null, 'certs/bioequivalencia.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Bioequivalencia',null,'certs/bioequivalencia.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1595,7 +1673,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Farmacovigilancia y Tecnovigilancia (NOM 220)', null, 'certs/farmacovigilancia-nom220.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Farmacovigilancia y Tecnovigilancia (NOM 220)',null,'certs/farmacovigilancia-nom220.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1614,7 +1692,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Control Sanitario de la Publicidad', null, 'certs/control-sanitario-publicidad.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Control Sanitario de la Publicidad',null,'certs/control-sanitario-publicidad.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1633,7 +1711,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('ICH E6 R3 — Buenas Prácticas Clínicas', null, 'certs/ich-e6-r3.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('ICH E6 R3 — Buenas Prácticas Clínicas',null,'certs/ich-e6-r3.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1651,7 +1729,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('NOM 004 SSA3 2012', null, 'certs/nom-004-ssa3.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('NOM 004 SSA3 2012',null,'certs/nom-004-ssa3.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1669,7 +1747,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Regulación Sanitaria en Comercio Internacional', null, 'certs/reg-sanitaria-internacional.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Regulación Sanitaria en Comercio Internacional',null,'certs/reg-sanitaria-internacional.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1688,7 +1766,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Ética y Desarrollo de Productos Farmacéuticos', null, 'certs/etica-farmaceutica.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Ética y Desarrollo de Productos Farmacéuticos',null,'certs/etica-farmaceutica.pdf')">
           <span class="crs-provider en-only">Ext. Training · Jun 2026</span>
@@ -1707,7 +1785,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Atención Clínica en Contextos Culturales', null, 'certs/atencion-clinica-cultural.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Atención Clínica en Contextos Culturales',null,'certs/atencion-clinica-cultural.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1726,7 +1804,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Rol de la Biodiversidad en One Health', null, 'certs/biodiversidad-one-health.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Rol de la Biodiversidad en One Health',null,'certs/biodiversidad-one-health.pdf')">
           <span class="crs-provider en-only">Ext. Training · May 2026</span>
@@ -1745,7 +1823,7 @@
           </span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button"
+        <div class="course-card" data-cat="reg" tabindex="0" role="button"
              onclick="openCert('Introducción a la Ética y la Bioética', 'UNAM — Programa Universitario de Bioética', 'certs/etica-bioetica-unam.pdf')"
              onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Introducción a la Ética y la Bioética','UNAM — Programa Universitario de Bioética','certs/etica-bioetica-unam.pdf')">
           <span class="crs-provider">UNAM · Jun 2026</span>
@@ -1764,14 +1842,14 @@
         </div>
 
         <!-- ── Jul 2026 ── -->
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Competencias del Auditor — Norma ISO 19011:2018','Sec. del Trabajo NL','certs/auditor-iso-19011.jpg')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Competencias del Auditor — Norma ISO 19011:2018','Sec. del Trabajo NL','certs/auditor-iso-19011.jpg')">
+        <div class="course-card" data-cat="mgmt" tabindex="0" role="button" onclick="openCert('Competencias del Auditor — Norma ISO 19011:2018','Sec. del Trabajo NL','certs/auditor-iso-19011.jpg')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Competencias del Auditor — Norma ISO 19011:2018','Sec. del Trabajo NL','certs/auditor-iso-19011.jpg')">
           <span class="crs-provider en-only">Sec. del Trabajo NL · Jul 2026</span><span class="crs-provider es-only">Sec. del Trabajo NL · Jul 2026</span>
           <p class="crs-name en-only">Auditor Competencies — ISO 19011:2018</p><p class="crs-name es-only">Competencias del Auditor — ISO 19011:2018</p>
           <p class="crs-desc en-only">Audit principles and techniques based on the international ISO 19011:2018 management systems auditing standard. 8 h.</p><p class="crs-desc es-only">Principios y técnicas de auditoría basados en la norma internacional ISO 19011:2018 para auditoría de sistemas de gestión. 8 h.</p>
           <span class="crs-action"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 4v5M4 6.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span class="en-only">View Certificate</span><span class="es-only">Ver Certificado</span></span>
         </div>
 
-        <div class="course-card" tabindex="0" role="button" onclick="openCert('Metodología Ocho Disciplinas (8D\'s)','Sec. del Trabajo NL','certs/metodologia-8ds.jpg')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Metodología Ocho Disciplinas (8D\'s)','Sec. del Trabajo NL','certs/metodologia-8ds.jpg')">
+        <div class="course-card" data-cat="mgmt" tabindex="0" role="button" onclick="openCert('Metodología Ocho Disciplinas (8D\'s)','Sec. del Trabajo NL','certs/metodologia-8ds.jpg')" onkeydown="if(event.key==='Enter'||event.key===' ')openCert('Metodología Ocho Disciplinas (8D\'s)','Sec. del Trabajo NL','certs/metodologia-8ds.jpg')">
           <span class="crs-provider">Sec. del Trabajo NL · Jul 2026</span>
           <p class="crs-name en-only">Eight Disciplines Methodology (8D's)</p><p class="crs-name es-only">Metodología Ocho Disciplinas (8D's)</p>
           <p class="crs-desc en-only">Structured problem-solving framework using the 8D methodology for identifying and correcting root causes. 4 h.</p><p class="crs-desc es-only">Metodología estructurada de resolución de problemas con el enfoque 8D para identificar y corregir causas raíz. 4 h.</p>
@@ -1892,6 +1970,20 @@
   function toggleTheme() {
     const r = document.documentElement;
     r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  }
+
+  // ── Course filter ─────────────────────────────
+  function filterCourses(btn) {
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.cf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.course-card').forEach(card => {
+      if (filter === 'all' || card.dataset.cat === filter) {
+        card.removeAttribute('hidden');
+      } else {
+        card.setAttribute('hidden', '');
+      }
+    });
   }
 
   // ── Certificate Modal ─────────────────────────
